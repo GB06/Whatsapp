@@ -1,13 +1,8 @@
 import pywhatkit as kit
 
-msg = "Hello this message is from Python"
+phone_num = input("Type a phone number: ")
+msg = input("Type a message: ")
+time_hour = input(str("Type a time (hour): "))
+time_minute = input(str("Type a time (minute): "))
 
-###### e.g 8:02 ######
-# num= str(9)
-# numz = num.zfill(2)
-
-# personal message
-kit.sendwhatmsg("phone_num", msg, 21,10)
-
-#group message
-kit.sendwhatmsg_to_group("group_id", msg, 21,10)
+kit.sendwhatmsg(f"+6{phone_num}", msg, int(time_hour),int(time_minute))
